@@ -28,4 +28,6 @@ use('theprimeagen/harpoon')
 -- install fugitive
 use('tpope/vim-fugitive')
 
+use { "ellisonleao/gruvbox.nvim" }
+
 end)
