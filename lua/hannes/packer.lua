@@ -63,4 +63,7 @@ use {
     end
 }
 
+-- install vimtex
+use ('lervag/vimtex')
+
 end)
