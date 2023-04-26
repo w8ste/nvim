@@ -52,17 +52,6 @@ return require('packer').startup(function(use)
     }
 }
 
-    --install file explorer 
-use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-        'nvim-tree/nvim-web-devicons', -- optional
-    },
-    config = function()
-        require("nvim-tree").setup {}
-    end
-}
-
 -- install vimtex
 use ('lervag/vimtex')
 
