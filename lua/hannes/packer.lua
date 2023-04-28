@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
     }
 }
 
--- install vimtex
-use ('lervag/vimtex')
+    -- install vimtex
+    use ('lervag/vimtex')
 
 end)
