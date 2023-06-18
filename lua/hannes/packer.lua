@@ -55,4 +55,6 @@ return require('packer').startup(function(use)
     -- install vimtex
     use ('lervag/vimtex')
 
+    use { "mfussenegger/nvim-jdtls", ft = { "java" }}
+
 end)
