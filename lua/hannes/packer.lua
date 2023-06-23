@@ -12,8 +12,6 @@ return require('packer').startup(function(use)
     }
 
     -- install colorscheme
-    use 'folke/tokyonight.nvim'
-
     use { "ellisonleao/gruvbox.nvim" }
 
     -- install treesitter
@@ -49,10 +47,10 @@ return require('packer').startup(function(use)
         {'L3MON4D3/LuaSnip'},     -- Required
     }
 }
-
-    -- install vimtex
-    use ('lervag/vimtex')
-
+    use 'lervag/vimtex'
     use { "mfussenegger/nvim-jdtls", ft = { "java" }}
-
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 end)
