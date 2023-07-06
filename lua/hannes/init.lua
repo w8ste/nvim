@@ -1,3 +1,5 @@
-require("hannes.remap")
+require("hannes.packer")
+require("hannes.theme")
 require("hannes.set")
-
+require("hannes.ui.tree")
+require("hannes.keymaps")
