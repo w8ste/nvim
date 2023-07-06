@@ -36,16 +36,8 @@ return require('packer').startup(function(use)
 
     -- nordic colorscheme
     use 'AlexvZyl/nordic.nvim'
-    -- treesitter
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    --harpoon
-    use('theprimeagen/harpoon')
 
     --undotree
-    use('mbbill/undotree')
-
-    --undotree
-    use('tpope/vim-fugitive')
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
