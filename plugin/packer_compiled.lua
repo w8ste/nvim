@@ -107,6 +107,11 @@ _G.packer_plugins = {
     path = "/home/hannes/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/hannes/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/hannes/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -132,6 +137,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hannes/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/hannes/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/NvChad/nvim-colorizer.lua"
   },
   ["nvim-jdtls"] = {
     loaded = false,

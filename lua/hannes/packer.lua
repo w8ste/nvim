@@ -71,8 +71,7 @@ use {
         'nvim-tree/nvim-web-devicons',
     },
 }
-
--- TODO
+use 'NvChad/nvim-colorizer.lua'
 use {
     'folke/todo-comments.nvim',
     requires = 'nvim-lua/plenary.nvim',
@@ -87,4 +86,12 @@ use {
   end,
   requires = {'nvim-tree/nvim-web-devicons'}
 }
+
+ use {
+            'nvim-lualine/lualine.nvim',
+            requires = {
+                'kyazdani42/nvim-web-devicons',
+                opt = true,
+            },
+        }
 end)
