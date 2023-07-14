@@ -37,6 +37,9 @@ return require('packer').startup(function(use)
     -- nordic colorscheme
     use 'AlexvZyl/nordic.nvim'
 
+    -- indend blankline
+    use "lukas-reineke/indent-blankline.nvim"
+
     --undotree
     use {
         'VonHeikemen/lsp-zero.nvim',
