@@ -1,2 +1,2 @@
 vim.opt.background = 'dark'
-require 'hannes.theme.gruvbox'
+require 'hannes.theme.nordic'
