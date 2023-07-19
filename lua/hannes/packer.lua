@@ -61,8 +61,8 @@ return require('packer').startup(function(use)
         {'L3MON4D3/LuaSnip'},     -- Required
     }
 }
-    use 'lervag/vimtex'
-    use { "mfussenegger/nvim-jdtls", ft = { "java" }}
+use 'lervag/vimtex'
+use { "mfussenegger/nvim-jdtls", ft = { "java" }}
 use {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
@@ -80,21 +80,23 @@ use {
     requires = 'nvim-lua/plenary.nvim',
 }
 use {
-  'glepnir/dashboard-nvim',
-  event = 'VimEnter',
-  config = function()
-    require('dashboard').setup {
-      -- config
-    }
-  end,
-  requires = {'nvim-tree/nvim-web-devicons'}
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+        require('dashboard').setup {
+            -- config
+        }
+    end,
+    requires = {'nvim-tree/nvim-web-devicons'}
 }
 
- use {
-            'nvim-lualine/lualine.nvim',
-            requires = {
-                'kyazdani42/nvim-web-devicons',
-                opt = true,
-            },
-        }
+-- install presence
+
+use {
+    'nvim-lualine/lualine.nvim',
+    requires = {
+        'kyazdani42/nvim-web-devicons',
+        opt = true,
+    },
+}
 end)
