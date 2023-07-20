@@ -2,45 +2,30 @@
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
+vim.opt.termguicolors = true
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    use 'folke/tokyonight.nvim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    -- install colorscheme
+    -- theme
     use { "ellisonleao/gruvbox.nvim" }
-
-    -- install treesitter
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-
-    -- install treesitter playground
-    use('nvim-treesitter/playground')
-
-    -- install harpoom
-    use('theprimeagen/harpoon')
-
-    -- install fugitive
-    use('tpope/vim-fugitive')
-
-    -- onedark colorscheme
-    use({
-        'navarasu/onedark.nvim'
-    })
-
-    -- nordic colorscheme
+    use({'navarasu/onedark.nvim'})
     use 'AlexvZyl/nordic.nvim'
+    use 'folke/tokyonight.nvim'
 
-    -- indend blankline
+    -- coding expirience
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/playground')
+    use('theprimeagen/harpoon')
+    use('tpope/vim-fugitive')
     use "lukas-reineke/indent-blankline.nvim"
-
-    --undotree
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -59,18 +44,26 @@ return require('packer').startup(function(use)
         {'hrsh7th/nvim-cmp'},     -- Required
         {'hrsh7th/cmp-nvim-lsp'}, -- Required
         {'L3MON4D3/LuaSnip'},     -- Required
+        }
     }
-}
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+    use {
+        'folke/todo-comments.nvim',
+        requires = 'nvim-lua/plenary.nvim',
+    }
+
+
+-- language Support
 use 'lervag/vimtex'
 use { "mfussenegger/nvim-jdtls", ft = { "java" }}
-use {
-    "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-}
 
--- install colorizer
+-- color support for nvim
 use 'norcalli/nvim-colorizer.lua'
 
+-- ui
 use {
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -78,20 +71,24 @@ use {
     },
 }
 use {
-    'folke/todo-comments.nvim',
-    requires = 'nvim-lua/plenary.nvim',
-}
-
--- install presence
-use 'andweeb/presence.nvim'
-
--- install lualine
-use {
     'nvim-lualine/lualine.nvim',
     requires = {
         'kyazdani42/nvim-web-devicons',
         opt = true,
     },
 }
+use "nvim-lua/plenary.nvim"
+use({
+    'willothy/nvim-cokeline',
+    requires = {
+      "nvim-lua/plenary.nvim",        -- Required for v0.4.0+
+      "kyazdani42/nvim-web-devicons", -- If you want devicons
+    },
+    config = function()
+      require("cokeline").setup()
+    end
+  })
 
+-- discord compatability 
+use 'andweeb/presence.nvim'
 end)
