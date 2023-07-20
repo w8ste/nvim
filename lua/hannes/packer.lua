@@ -68,13 +68,15 @@ use {
     config = function() require("nvim-autopairs").setup {} end
 }
 
+-- install colorizer
+use 'norcalli/nvim-colorizer.lua'
+
 use {
     'nvim-tree/nvim-tree.lua',
     requires = {
         'nvim-tree/nvim-web-devicons',
     },
 }
-use 'NvChad/nvim-colorizer.lua'
 use {
     'folke/todo-comments.nvim',
     requires = 'nvim-lua/plenary.nvim',
@@ -83,15 +85,14 @@ use {
     'glepnir/dashboard-nvim',
     event = 'VimEnter',
     config = function()
-        require('dashboard').setup {
-            -- config
-        }
-    end,
+        require('hannes.ui.dashboard') end,
     requires = {'nvim-tree/nvim-web-devicons'}
 }
 
 -- install presence
+use 'andweeb/presence.nvim'
 
+-- install lualine
 use {
     'nvim-lualine/lualine.nvim',
     requires = {
