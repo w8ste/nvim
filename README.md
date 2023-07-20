@@ -2,6 +2,9 @@
 
 This is my Neovim configuration: 
 
+![Alt text](https://github.com/w8ste/screenshots/blob/main/float_nvim.png)
+
+
 ![Alt text](https://github.com/w8ste/screenshots/blob/main/nvim_2.png)
 
 I also have a configured gruvbox theme:
