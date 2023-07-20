@@ -85,7 +85,7 @@ use {
     'glepnir/dashboard-nvim',
     event = 'VimEnter',
     config = function()
-        require('hannes.ui.dashboard') end,
+      require('hannes.ui.dashboard') end,
     requires = {'nvim-tree/nvim-web-devicons'}
 }
 
