@@ -81,13 +81,6 @@ use {
     'folke/todo-comments.nvim',
     requires = 'nvim-lua/plenary.nvim',
 }
-use {
-    'glepnir/dashboard-nvim',
-    event = 'VimEnter',
-    config = function()
-      require('hannes.ui.dashboard') end,
-    requires = {'nvim-tree/nvim-web-devicons'}
-}
 
 -- install presence
 use 'andweeb/presence.nvim'
@@ -100,4 +93,5 @@ use {
         opt = true,
     },
 }
+
 end)
