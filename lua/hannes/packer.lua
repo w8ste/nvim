@@ -2,7 +2,6 @@
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
-vim.opt.termguicolors = true
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
@@ -77,7 +76,7 @@ use {
         opt = true,
     },
 }
-use "nvim-lua/plenary.nvim"
+
 use({
     'willothy/nvim-cokeline',
     requires = {
@@ -85,7 +84,7 @@ use({
       "kyazdani42/nvim-web-devicons", -- If you want devicons
     },
     config = function()
-      require("cokeline").setup()
+      --require("cokeline").setup()
     end
   })
 
