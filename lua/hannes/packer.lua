@@ -157,10 +157,10 @@ use { --for some reason i had touble when trying to use a seperate file.
             key = 'f',
         },
         {
-        desc = '   Update ',
-        action = 'PackerSync',
-        group = '@string',
-        key = 'u',
+            desc = '   Update ',
+            action = 'PackerSync',
+            group = '@string',
+            key = 'u',
         },
         {
             desc = '   Quit ',
