@@ -1,4 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
@@ -118,5 +117,61 @@ use {
         vim.keymap.set("n", "K", require("hover").hover, {desc = "hover.nvim"})
         vim.keymap.set("n", "gK", require("hover").hover_select, {desc = "hover.nvim (select)"})
     end
+}
+use { --for some reason i had touble when trying to use a seperate file.
+  'glepnir/dashboard-nvim',
+  event = 'VimEnter',
+  config = function()
+    require('dashboard').setup {
+      -- config
+      theme = 'doom',
+    config = {
+        header = {
+        [[                                                    ]],
+        [[                                                    ]],
+        [[                                                    ]],
+        [[                                                    ]],
+        [[                                                    ]],
+	    [[ ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ]],
+	    [[ ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ]],
+	    [[ ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ]],
+	    [[ ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ]],
+	    [[ ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ]],
+	    [[ ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ]],
+	    [[                                                    ]],
+        [[                                                    ]],
+        [[                                                    ]],
+        [[                                                    ]],
+        },
+        center = {
+        {
+            desc = '   New file ',
+            action = 'enew',
+            group = '@string',
+            key = 'n',
+        },
+        {
+            desc = ' 󰈔  File/path ',
+            action = 'Telescope find_files find_command=rg,--hidden,--files',
+            group = '@string',
+            key = 'f',
+        },
+        {
+            desc = '   Update ',
+            action = 'PackerSync',
+            group = '@string',
+            key = 'u',
+        },
+        {
+            desc = '   Quit ',
+            action = 'q!',
+            group = '@macro',
+            key = 'q',
+        },
+        },
+        footer = {"Motivation changes excactly nobody - Goggins"}  --your footer
+    }
+    }end,
+  requires = {'nvim-tree/nvim-web-devicons'}
 }
 end)
