@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
         'folke/todo-comments.nvim',
         requires = 'nvim-lua/plenary.nvim',
     }
-
+    use"christoomey/vim-tmux-navigator"
 
 -- language Support
 use 'lervag/vimtex'
