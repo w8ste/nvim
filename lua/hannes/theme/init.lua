@@ -1,2 +1,2 @@
 vim.opt.background = 'dark'
-require 'hannes.theme.tokyonight'
+require 'hannes.theme.nordic'
