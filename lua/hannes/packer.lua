@@ -124,8 +124,8 @@ use { --for some reason i had touble when trying to use a seperate file.
   config = function()
     require('dashboard').setup {
       -- config
-      theme = 'doom',
-    config = {
+        theme = 'doom',
+        config = {
         header = {
         [[                                                    ]],
         [[                                                    ]],
@@ -173,5 +173,27 @@ use { --for some reason i had touble when trying to use a seperate file.
     }
     }end,
   requires = {'nvim-tree/nvim-web-devicons'}
+}
+
+--neorg
+use {
+    "nvim-neorg/neorg",
+    config = function()
+        require('neorg').setup {
+            load = {
+                ["core.defaults"] = {}, -- Loads default behaviour
+                ["core.concealer"] = {}, -- Adds pretty icons to your documents
+                ["core.dirman"] = { -- Manages Neorg workspaces
+                    config = {
+                        workspaces = {
+                            notes = "~/notes",
+                        },
+                    },
+                },
+            },
+        }
+    end,
+    run = ":Neorg sync-parsers",
+    requires = "nvim-lua/plenary.nvim",
 }
 end)
