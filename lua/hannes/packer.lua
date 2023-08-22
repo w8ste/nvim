@@ -1,4 +1,4 @@
-
+#
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
@@ -60,6 +60,7 @@ use { "mfussenegger/nvim-jdtls", ft = { "java" }}
 
 -- color support for nvim
 use 'norcalli/nvim-colorizer.lua'
+use 'echasnovski/mini.nvim'
 
 -- ui
 use {
@@ -109,12 +110,12 @@ use {
             },
             -- Whether the contents of a currently open hover window should be moved
             -- to a :h preview-window when pressing the hover keymap.
-            preview_window = true,
+            preview_window = false,
             title = true
         }
 
         -- Setup keymaps
-        vim.keymap.set("n", "K", require("hover").hover, {desc = "hover.nvim"})
+        --vim.keymap.set("n", "K", require("hover").hover, {desc = "hover.nvim"})
         vim.keymap.set("n", "gK", require("hover").hover_select, {desc = "hover.nvim (select)"})
     end
 }
@@ -152,7 +153,7 @@ use { --for some reason i had touble when trying to use a seperate file.
         },
         {
             desc = ' 󰈔  File/path ',
-            action = 'Telescope find_files find_command=rg,--hidden,--files',
+            action = 'Telescope find_files',
             group = '@string',
             key = 'f',
         },

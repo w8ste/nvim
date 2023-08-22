@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/hannes/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/hannes/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/hannes/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/hannes/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/hannes/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/hannes/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?.lua;/home/hannes/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?/init.lua;/home/hannes/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?.lua;/home/hannes/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/hannes/.cache/nvim/packer_hererocks/2.1.1692616192/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -85,7 +85,7 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\14\0\0\6\0\15\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\5\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\4=\4\v\0035\4\f\0=\4\r\3=\3\14\2B\0\2\1K\0\1\0\vconfig\vfooter\1\2\0\0001Motivation changes excactly nobody - Goggins\vcenter\1\0\4\bkey\6q\ngroup\v@macro\tdesc\16   Quit \vaction\aq!\1\0\4\bkey\6u\ngroup\f@string\tdesc\18   Update \vaction\15PackerSync\1\0\4\bkey\6f\ngroup\f@string\tdesc\22 󰈔  File/path \vaction:Telescope find_files find_command=rg,--hidden,--files\1\0\4\bkey\6n\ngroup\f@string\tdesc\20   New file \vaction\tenew\vheader\1\0\0\1\16\0\0009                                                    9                                                    9                                                    9                                                    9                                                    �\1 ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ �\1 ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ �\1 ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ �\1 ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ �\1 ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ �\1 ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ 9                                                    9                                                    9                                                    9                                                    \1\0\1\ntheme\tdoom\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\r\0\0\6\0\15\0\0236\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\5\0005\5\a\0>\5\1\0045\5\b\0>\5\2\0045\5\t\0>\5\3\0045\5\n\0>\5\4\4=\4\v\0035\4\f\0=\4\r\3=\3\14\2B\0\2\1K\0\1\0\vconfig\vfooter\1\2\0\0001Motivation changes excactly nobody - Goggins\vcenter\1\0\4\tdesc\16   Quit \vaction\aq!\bkey\6q\ngroup\v@macro\1\0\4\tdesc\18   Update \vaction\15PackerSync\bkey\6u\ngroup\f@string\1\0\4\tdesc\22 󰈔  File/path \vaction\25Telescope find_files\bkey\6f\ngroup\f@string\1\0\4\tdesc\20   New file \vaction\tenew\bkey\6n\ngroup\f@string\vheader\1\0\0\1\16\0\0009                                                    9                                                    9                                                    9                                                    9                                                    �\1 ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ �\1 ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ �\1 ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ �\1 ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ �\1 ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ �\1 ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ 9                                                    9                                                    9                                                    9                                                    \1\0\1\ntheme\tdoom\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -103,7 +103,7 @@ _G.packer_plugins = {
     url = "https://github.com/theprimeagen/harpoon"
   },
   ["hover.nvim"] = {
-    config = { "\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24hover.providers.lsp\frequire�\2\1\0\a\0\17\0!6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\0016\0\b\0009\0\t\0009\0\n\0'\2\v\0'\3\f\0006\4\0\0'\6\1\0B\4\2\0029\4\1\0045\5\r\0B\0\5\0016\0\b\0009\0\t\0009\0\n\0'\2\v\0'\3\14\0006\4\0\0'\6\1\0B\4\2\0029\4\15\0045\5\16\0B\0\5\1K\0\1\0\1\0\1\tdesc\24hover.nvim (select)\17hover_select\agK\1\0\1\tdesc\15hover.nvim\6K\6n\bset\vkeymap\bvim\17preview_opts\1\0\0\tinit\1\0\2\ntitle\2\19preview_window\2\0\nsetup\nhover\frequire\0" },
+    config = { "\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24hover.providers.lsp\frequire�\1\1\0\a\0\15\0\0226\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\0016\0\b\0009\0\t\0009\0\n\0'\2\v\0'\3\f\0006\4\0\0'\6\1\0B\4\2\0029\4\r\0045\5\14\0B\0\5\1K\0\1\0\1\0\1\tdesc\24hover.nvim (select)\17hover_select\agK\6n\bset\vkeymap\bvim\17preview_opts\1\0\0\tinit\1\0\2\19preview_window\1\ntitle\2\0\nsetup\nhover\frequire\0" },
     loaded = true,
     path = "/home/hannes/.local/share/nvim/site/pack/packer/start/hover.nvim",
     url = "https://github.com/lewis6991/hover.nvim"
@@ -132,6 +132,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hannes/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["mini.nvim"] = {
+    loaded = true,
+    path = "/home/hannes/.local/share/nvim/site/pack/packer/start/mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
   },
   neorg = {
     config = { "\27LJ\2\n�\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\f\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\t\0005\5\a\0005\6\6\0=\6\b\5=\5\n\4=\4\v\3=\3\r\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\1\nnotes\f~/notes\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0" },
@@ -255,10 +260,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
--- Config for: hover.nvim
-time([[Config for hover.nvim]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24hover.providers.lsp\frequire�\2\1\0\a\0\17\0!6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\0016\0\b\0009\0\t\0009\0\n\0'\2\v\0'\3\f\0006\4\0\0'\6\1\0B\4\2\0029\4\1\0045\5\r\0B\0\5\0016\0\b\0009\0\t\0009\0\n\0'\2\v\0'\3\14\0006\4\0\0'\6\1\0B\4\2\0029\4\15\0045\5\16\0B\0\5\1K\0\1\0\1\0\1\tdesc\24hover.nvim (select)\17hover_select\agK\1\0\1\tdesc\15hover.nvim\6K\6n\bset\vkeymap\bvim\17preview_opts\1\0\0\tinit\1\0\2\ntitle\2\19preview_window\2\0\nsetup\nhover\frequire\0", "config", "hover.nvim")
-time([[Config for hover.nvim]], false)
 -- Config for: neorg
 time([[Config for neorg]], true)
 try_loadstring("\27LJ\2\n�\1\0\0\a\0\14\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\f\0005\3\3\0004\4\0\0=\4\4\0034\4\0\0=\4\5\0035\4\t\0005\5\a\0005\6\6\0=\6\b\5=\5\n\4=\4\v\3=\3\r\2B\0\2\1K\0\1\0\tload\1\0\0\16core.dirman\vconfig\1\0\0\15workspaces\1\0\0\1\0\1\nnotes\f~/notes\19core.concealer\18core.defaults\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
@@ -267,6 +268,10 @@ time([[Config for neorg]], false)
 time([[Config for nvim-cokeline]], true)
 try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "nvim-cokeline")
 time([[Config for nvim-cokeline]], false)
+-- Config for: hover.nvim
+time([[Config for hover.nvim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\24hover.providers.lsp\frequire�\1\1\0\a\0\15\0\0226\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\0016\0\b\0009\0\t\0009\0\n\0'\2\v\0'\3\f\0006\4\0\0'\6\1\0B\4\2\0029\4\r\0045\5\14\0B\0\5\1K\0\1\0\1\0\1\tdesc\24hover.nvim (select)\17hover_select\agK\6n\bset\vkeymap\bvim\17preview_opts\1\0\0\tinit\1\0\2\19preview_window\1\ntitle\2\0\nsetup\nhover\frequire\0", "config", "hover.nvim")
+time([[Config for hover.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
