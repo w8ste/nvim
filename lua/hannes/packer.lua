@@ -37,13 +37,13 @@ return require('packer').startup(function(use)
             end,
         },
         {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
         -- Autocompletion
         {'hrsh7th/nvim-cmp'},     -- Required
         {'hrsh7th/cmp-nvim-lsp'}, -- Required
         {'L3MON4D3/LuaSnip'},     -- Required
         }
     }
+    use { 'kkharji/lspsaga.nvim' }  -- nightly
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
         'folke/todo-comments.nvim',
         requires = 'nvim-lua/plenary.nvim',
     }
-
+    use"christoomey/vim-tmux-navigator"
 
 -- language Support
 use 'lervag/vimtex'
@@ -60,6 +60,7 @@ use { "mfussenegger/nvim-jdtls", ft = { "java" }}
 
 -- color support for nvim
 use 'norcalli/nvim-colorizer.lua'
+use 'echasnovski/mini.nvim'
 
 -- ui
 use {
@@ -124,8 +125,8 @@ use { --for some reason i had touble when trying to use a seperate file.
   config = function()
     require('dashboard').setup {
       -- config
-      theme = 'doom',
-    config = {
+        theme = 'doom',
+        config = {
         header = {
         [[                                                    ]],
         [[                                                    ]],
@@ -173,5 +174,27 @@ use { --for some reason i had touble when trying to use a seperate file.
     }
     }end,
   requires = {'nvim-tree/nvim-web-devicons'}
+}
+
+--neorg
+use {
+    "nvim-neorg/neorg",
+    config = function()
+        require('neorg').setup {
+            load = {
+                ["core.defaults"] = {}, -- Loads default behaviour
+                ["core.concealer"] = {}, -- Adds pretty icons to your documents
+                ["core.dirman"] = { -- Manages Neorg workspaces
+                    config = {
+                        workspaces = {
+                            notes = "~/notes",
+                        },
+                    },
+                },
+            },
+        }
+    end,
+    run = ":Neorg sync-parsers",
+    requires = "nvim-lua/plenary.nvim",
 }
 end)
