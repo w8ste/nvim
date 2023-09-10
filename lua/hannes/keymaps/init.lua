@@ -1,7 +1,21 @@
 vim.g.mapleader = " "
--- makes no sense since netrw is disabled
---vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.api.nvim_create_autocmd('filetype', {
+  pattern = 'netrw',
+  desc = 'Better mappings for netrw',
+  callback = function()
+    local bind = function(lhs, rhs)
+      vim.keymap.set('n', lhs, rhs, {remap = true, buffer = true})
+    end
 
+    -- edit new file
+    bind('n', '%')
+
+    -- rename file
+    bind('r', 'R')
+    --bind("<leader>p", "")
+  end
+})
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 --vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -11,8 +25,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
---nvim tree remaps
-vim.keymap.set("n", "<leader>pv", function() require('hannes.keymaps.utils').toggleTree() end)
+--nvim tree (disabled) remaps
+--vim.keymap.set("n", "<leader>pv", function() require('hannes.keymaps.utils').toggleTree() end)
 
 -- save file
 vim.keymap.set("n", "<C-s>", function() require('hannes.keymaps.utils').save() end)

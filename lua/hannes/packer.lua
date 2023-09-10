@@ -63,12 +63,13 @@ use 'norcalli/nvim-colorizer.lua'
 use 'echasnovski/mini.nvim'
 
 -- ui
-use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-        'nvim-tree/nvim-web-devicons',
-    },
-}
+--use {
+--    'nvim-tree/nvim-tree.lua',
+--    requires = {
+--        'nvim-tree/nvim-web-devicons',
+--    },
+--}
+use 'nvim-tree/nvim-web-devicons'
 use {
     'nvim-lualine/lualine.nvim',
     requires = {
@@ -175,6 +176,10 @@ use { --for some reason i had touble when trying to use a seperate file.
     }end,
   requires = {'nvim-tree/nvim-web-devicons'}
 }
+
+
+-- bufferline
+use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
 --neorg
 use {
