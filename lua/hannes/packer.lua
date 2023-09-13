@@ -159,6 +159,12 @@ use { --for some reason i had touble when trying to use a seperate file.
             key = 'f',
         },
         {
+            desc = '   Recent Files',
+            action = 'Telescope oldfiles',
+            group = '@string',
+            key = 'r'
+        },
+        {
             desc = '   Update ',
             action = 'PackerSync',
             group = '@string',
