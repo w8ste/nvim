@@ -1,3 +1,17 @@
+local wk = require("which-key")
+
+wk.register({
+    p = {
+        name = "file",
+        f = { "<cmd>Telescope find_files<cr>", "Find File" }, -- create a binding with label
+    },
+    t = {
+       name = "terminal",
+        --t = {"vim.cmd.ToggleTerm", "Open Terminal"}
+    },
+}, { prefix = "<leader>" })
+
+
 return {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
@@ -82,7 +96,7 @@ return {
   -- disable the WhichKey popup for certain buf types and file types.
   -- Disabled by default for Telescope
   disable = {
-    buftypes = {},
-    filetypes = {},
+      buftypes = {},
+      filetypes = {},
   },
 }

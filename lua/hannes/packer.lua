@@ -1,4 +1,3 @@
-#
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
@@ -35,6 +34,7 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('tpope/vim-fugitive')
     use "lukas-reineke/indent-blankline.nvim"
+    use("hrsh7th/nvim-cmp")
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -72,6 +72,11 @@ use { "mfussenegger/nvim-jdtls", ft = { "java" }}
 -- color support for nvim
 use 'norcalli/nvim-colorizer.lua'
 use 'echasnovski/mini.nvim'
+
+-- toggle term
+use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+  require("toggleterm").setup()
+end}
 
 -- ui
 use 'nvim-tree/nvim-web-devicons'

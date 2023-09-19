@@ -25,8 +25,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
---nvim tree (disabled) remaps
---vim.keymap.set("n", "<leader>pv", function() require('hannes.keymaps.utils').toggleTree() end)
+-- toggle term
+vim.keymap.set("n", "<leader>tv", vim.cmd.ToggleTerm)
 
 -- save file
 vim.keymap.set("n", "<C-s>", function() require('hannes.keymaps.utils').save() end)
