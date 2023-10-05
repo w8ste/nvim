@@ -130,6 +130,18 @@ use {
         vim.keymap.set("n", "gK", require("hover").hover_select, {desc = "hover.nvim (select)"})
     end
 }
+
+-- games
+use {
+    "NStefan002/speedtyper.nvim",
+    config = function()
+        require('speedtyper').setup({
+            -- your config
+        })
+    end
+}
+
+-- dashboard
 use { --for some reason i had touble when trying to use a seperate file.
   'glepnir/dashboard-nvim',
   event = 'VimEnter',

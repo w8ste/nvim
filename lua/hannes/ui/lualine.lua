@@ -173,7 +173,7 @@ local tree = {
             {
                 get_short_cwd,
                 padding = 0,
-                icon = { '   ', color = { fg = c.white } },
+                icon = { '  ', color = { fg = c.white } },
                 color = { fg = c.white },
             },
         },
@@ -211,7 +211,7 @@ local telescope = {
             {
                 telescope_text,
                 color = { fg = c.white },
-                icon = { '  ', color = { fg = c.white } },
+                icon = { ' ', color = { fg = c.white } },
             },
         },
         lualine_x = {},
@@ -246,7 +246,7 @@ require('lualine').setup {
             {
                 parent_folder,
                 color = { fg = c.white },
-                icon = { '   ', color = { fg = c.white } },
+                icon = { '  ', color = { fg = c.white } },
                 separator = '',
                 padding = 0,
             },
@@ -259,7 +259,7 @@ require('lualine').setup {
             {
                 'branch',
                 color = { fg = c.white },
-                icon = { '   ', color = { fg = c.white } },
+                icon = { '  ', color = { fg = c.white } },
                 separator = ' ',
                 padding = 0,
             },
@@ -302,7 +302,7 @@ require('lualine').setup {
                 padding = 2,
                 separator = ' ',
                 color = { fg = c.white },
-                icon = { ' ', color = { fg = c.white } },
+                icon = { '', color = { fg = c.white } },
             },
             { copilot_normal, color = { fg = c.white }, padding = 0 },
             { copilot_warn, color = { fg = c.yellow.base }, padding = 0 },
